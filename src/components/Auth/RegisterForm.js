@@ -21,8 +21,10 @@ export default function RegisterForm(props) {
         //Siempre ejecuta el try, no lo entiendo
         //No sale el toast
         changeForm();
-      } catch (err) {
-        console.log(err);
+      } catch (error) {
+        Toast.show("Error al registrar el usuario", {
+          position: Toast.positions.CENTER,
+        });
         setLoading(false);
       }
     },
