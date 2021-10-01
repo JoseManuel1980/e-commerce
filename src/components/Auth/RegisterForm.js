@@ -17,9 +17,9 @@ export default function RegisterForm(props) {
     onSubmit: async (formData) => {
       setLoading(true);
       try {
-        await registerApi(formData);
-        //Siempre ejecuta el try, no lo entiendo
-        //No sale el toast
+        const response = await registerApi(formData);
+        if (response.statusCode) throw "Error";
+        console.log(response);
         changeForm();
       } catch (error) {
         Toast.show("Error al registrar el usuario", {

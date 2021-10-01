@@ -13,7 +13,7 @@ import RegisterForm from "./../components/Auth/RegisterForm";
 import LoginForm from "./../components/Auth/LoginForm";
 
 export default function Auth() {
-  const [showLogin, setShowLogin] = useState(false);
+  const [showLogin, setShowLogin] = useState(true);
 
   const changeForm = () => setShowLogin(!showLogin);
 
